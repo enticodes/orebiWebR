@@ -8,7 +8,7 @@ import adThree from '/src/assets/adThree.jpg'
 
 const Ads = () => {
   return (
-    <div className={"py-68.75"}> 
+    <div className={"py-10.75"}> 
         <Container>
             <Flex className={"gap-x-10"}>
                 <div className={"w-[45%]"}><Image imgSrc={adOne} className={"w-full"}/></div>

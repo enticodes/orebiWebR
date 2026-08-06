@@ -7,9 +7,12 @@ import Badge from '../common/Badge'
 import watch from '/src/assets/watch.png'
 import basket from '/src/assets/basket.png'
 import softtoy from '/src/assets/softtoy.png'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 // const Arrivals = () => {
 //   return (
@@ -37,48 +40,54 @@ import 'swiper/css';
 
 const Arrivals = () => {
   return (
+     <Container>
+      
     <Swiper
-    modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={4}
-      navigation
-      pagination={{ clickable: true }}
-       scrollbar={{ draggable: true }}
+  
+           modules={[Navigation, Scrollbar, A11y]}
+                    spaceBetween={24}
+                    slidesPerView={4.2}
+                    navigation
+                    loop={true}
+                    speed={600}
+
+      
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide> <div className={"w-[1/4]"}>
+      <SwiperSlide>
         <Products productImg={clock} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>  <div className={"w-[1/4]"}>
+      <SwiperSlide>
         <Products productImg={watch} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>  <div className={"w-[1/4]"}>
+      <SwiperSlide>
         <Products productImg={basket} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>   <div className={"w-[1/4]"}>
+      <SwiperSlide> 
         <Products productImg={softtoy} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
-      <SwiperSlide> <div className={"w-[1/4]"}>
+      </SwiperSlide>
+
+      <SwiperSlide>
         <Products productImg={clock} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>  <div className={"w-[1/4]"}>
+      <SwiperSlide>
         <Products productImg={watch} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>  <div className={"w-[1/4]"}>
+      <SwiperSlide>
         <Products productImg={basket} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
+      </SwiperSlide>
 
-      <SwiperSlide>   <div className={"w-[1/4]"}>
+      <SwiperSlide> 
         <Products productImg={softtoy} badgeT={"new"} productT={"Basic Crew Neck Tee"} />
-      </div></SwiperSlide>
-      ...
+      </SwiperSlide>
     </Swiper>
+    </Container>
   );
 };
 
