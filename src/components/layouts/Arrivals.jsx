@@ -34,7 +34,13 @@ const Arrivals = () => {
 
       <Container>
         <Heading text={"New Arrivals"} as={"h2"} className={"text-3xl font-bold mb-12"} />
-        <Swiper modules={[Navigation, Scrollbar, A11y]} spaceBetween={24} slidesPerView={4.2} navigation loop={true} speed={600} onSlideChange={() => console.log("slide change")} onSwiper={(swiper) => console.log(swiper)} > {allData.slice(0, 8).map((item) => (<SwiperSlide key={item.id}> <Products productImg={item.thumbnail} badgeT={"new"} productT={item.title} /> </SwiperSlide>))} </Swiper>
+        <Swiper modules={[Navigation, Scrollbar, A11y]}
+         spaceBetween={24} 
+         slidesPerView={4.2} 
+         navigation loop={true} 
+         speed={600} > 
+        {allData.slice(0, 8).map((item) => (<SwiperSlide key={item.id}> 
+        <Products productImg={item.thumbnail} badgeT={"new"} productT={item.title} /> </SwiperSlide>))} </Swiper>
       </Container>
     </div>
   );
