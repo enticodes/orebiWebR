@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
+import Heading from '../common/Heading'
 
 // const Arrivals = () => {
 //   return (
@@ -40,8 +41,10 @@ import 'swiper/css/scrollbar';
 
 const Arrivals = () => {
   return (
-     <Container>
+    <div className={"mt-32"}>
       
+       <Container>
+      <Heading text={"New Arrivals"} as={"h2"} className={"text-3xl font-bold mb-12"}/>
     <Swiper
   
            modules={[Navigation, Scrollbar, A11y]}
@@ -88,6 +91,7 @@ const Arrivals = () => {
       </SwiperSlide>
     </Swiper>
     </Container>
+    </div>
   );
 };
 
