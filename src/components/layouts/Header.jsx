@@ -6,23 +6,16 @@ import logo from "/src/assets/Logo.png";
 import { IoReorderTwo } from "react-icons/io5";
 import { FaSearch, FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
 import { useState, useRef } from "react";
- 
-const Header = () => {
 
-     let dropRef = useRef(null);
+const Header = () => {
+  let dropRef = useRef(null);
 
   let handleDrop = () => {
-    
-     
-
     if (dropRef.current.style.display == "block") {
       dropRef.current.style.display = "none";
-    } 
-    
-    else {
+    } else {
       dropRef.current.style.display = "block";
     }
-
   };
   return (
     <>
@@ -70,9 +63,14 @@ const Header = () => {
         <Container>
           <Flex className={"justify-between"}>
             <div className={"flex items-center pt-10 pb-10"}>
-              <IoReorderTwo className={"cursor-pointer"} onClick={handleDrop}/>
-              <h6 className={"text-[14px] cursor-pointer"} onClick={handleDrop}>Shop by Category </h6>
-              <div className="absolute top-40 left-10 mt-3 w-64 bg-white shadow-lg border border-gray-100 z-50 hidden" ref={dropRef}>
+              <IoReorderTwo className={"cursor-pointer"} onClick={handleDrop} />
+              <h6 className={"text-[14px] cursor-pointer"} onClick={handleDrop}>
+                Shop by Category{" "}
+              </h6>
+              <div
+                className="absolute top-40 left-10 mt-3 w-64 bg-white shadow-lg border border-gray-100 z-50 hidden"
+                ref={dropRef}
+              >
                 <div className="px-5 py-3 hover:bg-gray-100 cursor-pointer">
                   Electronics
                 </div>
@@ -140,8 +138,21 @@ const Header = () => {
             </div>
             <div className={"flex items-center"}>
               <FaUser />
+
               <FaCaretDown />
-              <FaShoppingCart className={"ml-10.25"} />
+
+              <div className={"relative ml-10.25 cursor-pointer"}>
+                <FaShoppingCart />
+
+                {/* Cart quantity */}
+                <span
+                  className={
+                    "absolute -top-3 -right-3 bg-black text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+                  }
+                >
+                  {/* {cartCount} */}
+                </span>
+              </div>
             </div>
           </Flex>
         </Container>
