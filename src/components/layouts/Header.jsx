@@ -6,9 +6,11 @@ import logo from "/src/assets/Logo.png";
 import { IoReorderTwo } from "react-icons/io5";
 import { FaSearch, FaUser, FaCaretDown, FaShoppingCart } from "react-icons/fa";
 import { useState, useRef } from "react";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   let dropRef = useRef(null);
+  const cartCount = useSelector((state) => state.cart.value);
 
   let handleDrop = () => {
     if (dropRef.current.style.display == "block") {
@@ -17,6 +19,7 @@ const Header = () => {
       dropRef.current.style.display = "block";
     }
   };
+
   return (
     <>
       <div>
@@ -144,14 +147,15 @@ const Header = () => {
               <div className={"relative ml-10.25 cursor-pointer"}>
                 <FaShoppingCart />
 
-                {/* Cart quantity */}
-                <span
-                  className={
-                    "absolute -top-3 -right-3 bg-black text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
-                  }
-                >
-                  {/* {cartCount} */}
-                </span>
+                {cartCount > 0 && (
+                  <span
+                    className={
+                      "absolute -top-3 -right-3 bg-black text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center"
+                    }
+                  >
+                    {cartCount}
+                  </span>
+                )}
               </div>
             </div>
           </Flex>
