@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Badge = ({badgeText,className}) => {
+const Badge = ({ badgeText, className = "" }) => {
   return (
-    <div className={`py-3 px-8 bg-black text-white uppercase text-[14px] w-23 ${className}`}>{badgeText}</div>
-  )
-}
+    <span
+      className={`inline-flex items-center justify-center text-center px-3 py-1 bg-black dark:bg-white text-white dark:text-black uppercase font-bold text-[10px] sm:text-xs rounded-md shadow-sm whitespace-nowrap z-10 ${className}`}
+    >
+      {badgeText}
+    </span>
+  );
+};
 
-export default Badge
+export default Badge;

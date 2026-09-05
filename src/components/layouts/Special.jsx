@@ -3,7 +3,6 @@ import axios from 'axios'
 import Container from '../common/Container'
 import Heading from '../common/Heading'
 import Products from '../common/Products'
-import Flex from '../common/Flex'
 
 const Special = () => {
 
@@ -11,38 +10,46 @@ const Special = () => {
 
   useEffect(() => {
     async function alldatas() {
-      let data = await axios.get("https://dummyjson.com/products")
-      setAllData(data.data.products)
+      try {
+        let data = await axios.get("https://dummyjson.com/products")
+        setAllData(data.data.products || [])
+      } catch (err) {
+        console.error(err);
+      }
     }
 
     alldatas()
   }, [])
 
   return (
-    <div className={"mb-35"}>
+    <section className={"py-12 mb-12"}>
       <Container>
 
         <Heading
           text={"Special Offers"}
           as={"h2"}
-          className={"text-3xl font-bold mb-12"}
+          className={"text-3xl font-black mb-8 dark:text-white"}
         />
 
-        <Flex className={"gap-x-10"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"}>
 
           {allData.slice(12, 16).map((item) => (
             <Products
               key={item.id}
+              item={item}
               productImg={item.thumbnail}
-              badgeT={"new"}
+              badgeT={"30% OFF"}
               productT={item.title}
+              price={item.price}
+              category={item.category}
+              rating={item.rating}
             />
           ))}
 
-        </Flex>
+        </div>
 
       </Container>
-    </div>
+    </section>
   )
 }
 
