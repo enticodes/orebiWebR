@@ -16,16 +16,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-100 dark:bg-slate-950 text-gray-800 dark:text-gray-200 border-t border-gray-200 dark:border-slate-800/80 pt-12 sm:pt-16 pb-8 sm:pb-12 transition-colors duration-300">
+    <footer className="w-full bg-black text-gray-300 border-t border-neutral-800 pt-12 sm:pt-16 pb-8 sm:pb-12 transition-colors duration-300">
       <Container>
         
         {/* Top Newsletter Strip on Footer */}
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm border border-gray-200/60 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-neutral-900 rounded-3xl p-6 sm:p-8 mb-12 shadow-sm border border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h3 className="text-lg sm:text-xl font-black text-gray-900 dark:text-white">
+            <h3 className="text-lg sm:text-xl font-black text-white">
               Join Our Newsletter
             </h3>
-            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs sm:text-sm text-gray-400">
               Get 10% off your first order and stay updated on exclusive deals.
             </p>
           </div>
@@ -34,11 +34,11 @@ const Footer = () => {
               type="email"
               required
               placeholder="Enter your email address..."
-              className="flex-1 px-4 py-2.5 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white"
+              className="flex-1 px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-xl text-xs sm:text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button
               type="submit"
-              className="px-5 py-2.5 bg-black dark:bg-white text-white dark:text-black font-bold text-xs sm:text-sm rounded-xl hover:opacity-90 transition-opacity flex items-center gap-2 flex-shrink-0"
+              className="px-5 py-2.5 bg-white text-black font-bold text-xs sm:text-sm rounded-xl hover:bg-gray-200 transition-colors flex items-center gap-2 flex-shrink-0"
             >
               Subscribe <FaPaperPlane className="text-xs" />
             </button>
@@ -51,37 +51,37 @@ const Footer = () => {
           {/* Brand & Info - Full width on small screens */}
           <div className="col-span-2 md:col-span-1 space-y-4">
             <Link to="/">
-              <Image imgSrc={orebii} className="h-7 object-contain dark:invert mb-3" />
+              <Image imgSrc={orebii} className="h-7 object-contain invert mb-3" />
             </Link>
-            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            <p className="text-xs text-gray-400 leading-relaxed">
               Orebi Web Store is your destination for premium tech, gadgets, lifestyle, and fashion accessories.
             </p>
 
-            <div className="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 pt-2">
+            <div className="flex items-center gap-2.5 text-gray-300 pt-2">
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 flex items-center justify-center text-xs hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-xs text-gray-300 hover:bg-white hover:text-black transition-colors"
                 title="Facebook"
               >
                 <FaFacebookF />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 flex items-center justify-center text-xs hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-xs text-gray-300 hover:bg-white hover:text-black transition-colors"
                 title="Twitter"
               >
                 <FaTwitter />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 flex items-center justify-center text-xs hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-xs text-gray-300 hover:bg-white hover:text-black transition-colors"
                 title="LinkedIn"
               >
                 <FaLinkedinIn />
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 flex items-center justify-center text-xs hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                className="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-xs text-gray-300 hover:bg-white hover:text-black transition-colors"
                 title="Instagram"
               >
                 <FaInstagram />
@@ -91,32 +91,32 @@ const Footer = () => {
 
           {/* Quick Menu */}
           <div className="col-span-1 space-y-3">
-            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-900 dark:text-white">
+            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-white">
               MENU
             </h3>
-            <ul className="space-y-2 text-xs font-semibold text-gray-500 dark:text-gray-400">
+            <ul className="space-y-2 text-xs font-semibold text-gray-400">
               <li>
-                <Link to="/" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop" className="hover:text-white transition-colors">
                   Shop
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/about" className="hover:text-white transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/contact" className="hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/cart" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/cart" className="hover:text-white transition-colors">
                   Cart
                 </Link>
               </li>
@@ -125,32 +125,32 @@ const Footer = () => {
 
           {/* Categories */}
           <div className="col-span-1 space-y-3">
-            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-900 dark:text-white">
+            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-white">
               CATEGORIES
             </h3>
-            <ul className="space-y-2 text-xs font-semibold text-gray-500 dark:text-gray-400">
+            <ul className="space-y-2 text-xs font-semibold text-gray-400">
               <li>
-                <Link to="/shop?category=electronics" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop?category=electronics" className="hover:text-white transition-colors">
                   Electronics
                 </Link>
               </li>
               <li>
-                <Link to="/shop?category=laptops" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop?category=laptops" className="hover:text-white transition-colors">
                   Laptops
                 </Link>
               </li>
               <li>
-                <Link to="/shop?category=mens-shoes" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop?category=mens-shoes" className="hover:text-white transition-colors">
                   Footwear
                 </Link>
               </li>
               <li>
-                <Link to="/shop?category=smartphones" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop?category=smartphones" className="hover:text-white transition-colors">
                   Smartphones
                 </Link>
               </li>
               <li>
-                <Link to="/shop?category=beauty" className="hover:text-black dark:hover:text-white transition-colors">
+                <Link to="/shop?category=beauty" className="hover:text-white transition-colors">
                   Beauty
                 </Link>
               </li>
@@ -159,23 +159,23 @@ const Footer = () => {
 
           {/* Policy & Help */}
           <div className="col-span-1 space-y-3">
-            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-900 dark:text-white">
+            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-white">
               HELP & POLICIES
             </h3>
-            <ul className="space-y-2 text-xs font-semibold text-gray-500 dark:text-gray-400">
-              <li className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">
+            <ul className="space-y-2 text-xs font-semibold text-gray-400">
+              <li className="hover:text-white cursor-pointer transition-colors">
                 Privacy Policy
               </li>
-              <li className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">
+              <li className="hover:text-white cursor-pointer transition-colors">
                 Terms of Service
               </li>
-              <li className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">
+              <li className="hover:text-white cursor-pointer transition-colors">
                 Shipping & Delivery
               </li>
-              <li className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">
+              <li className="hover:text-white cursor-pointer transition-colors">
                 Returns & Refund
               </li>
-              <li className="hover:text-black dark:hover:text-white cursor-pointer transition-colors">
+              <li className="hover:text-white cursor-pointer transition-colors">
                 FAQ & Help Center
               </li>
             </ul>
@@ -183,20 +183,20 @@ const Footer = () => {
 
           {/* Contact Details */}
           <div className="col-span-2 sm:col-span-1 space-y-3">
-            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-gray-900 dark:text-white">
+            <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-white">
               CONTACT
             </h3>
-            <div className="space-y-2 text-xs text-gray-500 dark:text-gray-400">
-              <div className="flex items-center gap-2 font-bold text-gray-900 dark:text-white">
-                <FaPhoneAlt className="text-emerald-500 text-xs" />
+            <div className="space-y-2 text-xs text-gray-400">
+              <div className="flex items-center gap-2 font-bold text-white">
+                <FaPhoneAlt className="text-emerald-400 text-xs" />
                 <span>+1 (800) 555-OREBI</span>
               </div>
               <div className="flex items-center gap-2">
-                <FaEnvelope className="text-indigo-500 text-xs" />
+                <FaEnvelope className="text-indigo-400 text-xs" />
                 <span>support@orebi.com</span>
               </div>
               <div className="flex items-start gap-2 pt-1 leading-relaxed">
-                <FaMapMarkerAlt className="text-rose-500 text-xs mt-0.5 flex-shrink-0" />
+                <FaMapMarkerAlt className="text-rose-400 text-xs mt-0.5 flex-shrink-0" />
                 <span>575 Crescent Ave, Quakertown, PA 18951</span>
               </div>
             </div>
@@ -205,7 +205,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 sm:pt-8 border-t border-gray-200 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-gray-500 dark:text-gray-400">
+        <div className="pt-6 sm:pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-gray-400">
           <p>© {new Date().getFullYear()} Orebi Store. All rights reserved.</p>
           <div className="flex items-center gap-4 text-[11px]">
             <span className="hover:underline cursor-pointer">Privacy</span>
